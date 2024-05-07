@@ -25,30 +25,41 @@ const Result = ({ yourPick, housePick, handleReset, win }) => {
   }
   return (
     <div>
-      <div className="mx-auto w-2/5 flex flex-row justify-between">
-        <div className="flex flex-col gap-12 items-center">
+      <div className="mx-auto p-4 md:w-2/5 flex flex-row justify-between">
+        <div className="flex flex-col gap-12 items-center w-1/2 md:w-auto">
           <div className="text-white uppercase text-xl font-bold">
             You picked
           </div>
           <div>{yourPickDisplay}</div>
         </div>
-        <div className="flex flex-col gap-4 items-center justify-center">
+        <div className="hidden md:flex flex-col gap-4 items-center justify-center">
           <div className="text-3xl text-white uppercase font-bold">
             {win ? "You win" : "You lose"}
           </div>
           <button
             onClick={handleReset}
-            className="bg-white text-amber-600 py-2 px-12 rounded-lg uppercase text-base font-bold"
+            className="bg-white text-amber-600 py-2 px-12 rounded-lg uppercase text-base font-bold active:scale-110"
           >
             Play again
           </button>
         </div>
-        <div className="flex flex-col gap-12 items-center">
+        <div className="flex flex-col gap-12 items-center  w-1/2 md:w-auto">
           <div className="text-white uppercase text-xl font-bold">
             The house picked
           </div>
           <div>{housePickDisplay}</div>
         </div>
+      </div>
+      <div className="flex md:hidden flex-col gap-4 items-center justify-center">
+        <div className="text-3xl text-white uppercase font-bold">
+          {win ? "You win" : "You lose"}
+        </div>
+        <button
+          onClick={handleReset}
+          className="bg-white text-amber-600 py-2 px-12 rounded-lg uppercase text-base font-bold active:scale-110"
+        >
+          Play again
+        </button>
       </div>
     </div>
   );

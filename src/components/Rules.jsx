@@ -16,11 +16,11 @@ const Rules = ({ onClose }) => {
       onClick={closeModal}
       className="fixed inset-0 bg-black bg-opacity-80 backgrop-blur-sm flex justify-center items-center z-30"
     >
-      <div className="bg-white w-1/5 flex flex-col gap-4 rounded-lg">
-        <div className="flex flex-row justify-between items-center py-4 px-8">
+      <div className="bg-white w-full h-full md:h-auto md:w-1/5 flex flex-col gap-4 rounded-lg">
+        <div className="flex flex-row justify-center md:justify-between items-center py-4 px-8">
           <h2 className="text-2xl font-bold uppercase text-slate-600">Rules</h2>
           <AiOutlineClose
-            className="cursor-pointer"
+            className="cursor-pointer hidden md:block"
             size={26}
             color="grey"
             onClick={onClose}
@@ -28,6 +28,14 @@ const Rules = ({ onClose }) => {
         </div>
         <div className="py-8 px-8">
           <img className="object-fit mx-auto" src={rulesImage} alt="" />
+        </div>
+        <div className="flex flex-row justify-center md:justify-between items-center py-4 px-8">
+          <AiOutlineClose
+            className="cursor-pointer md:hidden mt-10"
+            size={26}
+            color="grey"
+            onClick={onClose}
+          />
         </div>
       </div>
     </div>

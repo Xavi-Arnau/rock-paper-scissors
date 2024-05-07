@@ -3,7 +3,7 @@ import React from "react";
 const Score = ({ score }) => {
   return (
     <div className="p-8">
-      <div className="border-2 border-headerOutline rounded-xl mx-auto w-2/4 flex flex-row justify-between text-white p-4 items-center">
+      <div className="border-2 border-headerOutline rounded-xl mx-auto md:w-2/4 flex flex-row justify-between text-white p-4 items-center">
         <div className="uppercase text-4xl font-bold leading-7 flex flex-col">
           <div>Rock</div>
           <div>Paper</div>

@@ -58,7 +58,7 @@ function App() {
   }, [score]);
 
   return (
-    <div className="w-full h-screen bg-gradient-radial from-green to-darkGreen">
+    <div className="w-full h-full md:h-screen bg-gradient-radial from-green to-darkGreen">
       <Score score={score} />
       {!pick && <Game handlePick={handlePick} />}
       {pick && (
@@ -71,7 +71,7 @@ function App() {
       )}
 
       {showRules && <Rules onClose={() => setShowRules(false)} />}
-      <div className="flex flex-row justify-end p-6 fixed left-0 bottom-0 w-full">
+      <div className="flex flex-row md:absolute justify-center md:justify-end p-6 mt-10 md:mt-auto md:left-0 md:bottom-0 w-full">
         <button
           onClick={() => setShowRules(true)}
           className="text-white text-sm py-2 px-8 border-2 border-headerOutline rounded-lg uppercase tracking-widest active:scale-110"

@@ -9,19 +9,19 @@ const Game = ({ handlePick }) => {
   return (
     <div className="mt-12">
       <div
-        className="mx-auto w-1/5 h-full bg-cover bg-no-repeat flex flex-col"
+        className="md:mx-auto w-full md:w-1/5 bg-cover bg-no-repeat flex flex-col"
         style={{ backgroundImage: `url(${board})` }}
       >
         <div className="flex flex-row justify-between">
-          <div className="-mt-10 -ml-5">
+          <div className="-mt-10 md:-ml-5">
             <Paper handlePick={handlePick} />
           </div>
-          <div className="-mt-10 -mr-5">
+          <div className="-mt-10 md:-mr-5">
             <Scissors handlePick={handlePick} />
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="mt-10">
+          <div className="mt-20 md:mt-10">
             <Rock handlePick={handlePick} />
           </div>
         </div>
