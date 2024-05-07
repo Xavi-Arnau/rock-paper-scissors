@@ -58,7 +58,7 @@ function App() {
   }, [score]);
 
   return (
-    <div className="w-full h-full md:h-screen bg-gradient-radial from-green to-darkGreen">
+    <div className="w-full h-screen bg-gradient-radial from-green to-darkGreen">
       <Score score={score} />
       {!pick && <Game handlePick={handlePick} />}
       {pick && (
